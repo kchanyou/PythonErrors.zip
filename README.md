@@ -3,7 +3,7 @@ Collection of Python errors and solutions
 
 ---------------------------------------------------
 
-Win10 / Python3.6
+Win10 / Python3.6<br>
 cmd : pip list
 
 Traceback (most recent call last):
