@@ -1,4 +1,4 @@
-# Python_Error.zip
+# PythonError.zip
 Collection of Python errors and solutions
 
 ---------------------------------------------------
