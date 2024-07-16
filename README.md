@@ -2,14 +2,13 @@
 Collection of Python errors and solutions
 
 ## Index
-[TypeError: expected str, bytes or os.PathLike object, not int](#ErrorNo.1) <br>
-[ImportError: The requests library is not installed from please install the requests package to use the requests transport.
+- [TypeError: expected str, bytes or os.PathLike object, not int](#ErrorNo.1) <br>
+- [ImportError: The requests library is not installed from please install the requests package to use the requests transport.
 ](#ErrorNo.2)
 
 ---------------------------------------------------
-#### ErrorNo.1
-
-Env : Win10 / Python3.6<br>
+### ErrorNo.1 <a id="ErrorNo.1"></a> 
+#### Env : Win10 / Python3.6<br>
 cmd : pip list -> TypeError: expected str, bytes or os.PathLike object, not int
 
 Traceback (most recent call last):
@@ -31,9 +30,9 @@ TypeError: expected str, bytes or os.PathLike object, not int
 #### Solution : py -m pip install --upgrade pip --no-cache-dir
 
 ---------------------------------------------------
-#### ErrorNo.2
+### ErrorNo.2  <a id="ErrorNo.2"></a>
 
-Env : Win10 / Python3.7<br>
+#### Env : Win10 / Python3.7<br>
 cmd : tensorboard --logdir=path (related to tensorflow) -> ImportError: The requests library is not installed from please install the requests package to use the requests transport.
 
 
