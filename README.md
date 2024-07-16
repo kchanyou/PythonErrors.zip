@@ -2,7 +2,7 @@
 Collection of Python errors and solutions
 
 ## Index
-[TypeError: expected str, bytes or os.PathLike object, not int](#ErrorNo.1)
+[TypeError: expected str, bytes or os.PathLike object, not int](#ErrorNo.1) <br>
 [ImportError: The requests library is not installed from please install the requests package to use the requests transport.
 ](#ErrorNo.2)
 
