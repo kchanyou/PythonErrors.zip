@@ -5,12 +5,15 @@ Collection of Python errors and solutions
 - [TypeError: expected str, bytes or os.PathLike object, not int](#ErrorNo.1) <br>
 - [ImportError: The requests library is not installed from please install the requests package to use the requests transport.
 ](#ErrorNo.2)
+- [TypeError: Descriptors cannot be created directly.(PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python)
+](#ErrorNo.2)
 
 ---------------------------------------------------
 ### ErrorNo.1 <a id="ErrorNo.1"></a> 
 #### Env : Win10 / Python3.6<br>
 cmd : pip list -> TypeError: expected str, bytes or os.PathLike object, not int
 
+```
 Traceback (most recent call last):
   File "C:\Program Files\Python36\lib\runpy.py", line 193, in _run_module_as_main
     "__main__", mod_spec)
@@ -26,6 +29,7 @@ Traceback (most recent call last):
   File "C:\Program Files\Python36\lib\ntpath.py", line 75, in join
     path = os.fspath(path)
 TypeError: expected str, bytes or os.PathLike object, not int
+```
 
 #### Solution : py -m pip install --upgrade pip --no-cache-dir
 
@@ -35,7 +39,7 @@ TypeError: expected str, bytes or os.PathLike object, not int
 #### Env : Win10 / Python3.7<br>
 cmd : tensorboard --logdir=path (related to tensorflow) -> ImportError: The requests library is not installed from please install the requests package to use the requests transport.
 
-
+```
 Traceback (most recent call last):
   File "c:\probuf\lib\site-packages\google\auth\transport\requests.py", line 26, in <module>
     import requests
@@ -76,6 +80,28 @@ Traceback (most recent call last):
   File "c:\probuf\lib\site-packages\google\auth\transport\requests.py", line 30, in <module>
     ) from caught_exc
 ImportError: The requests library is not installed from please install the requests package to use the requests transport.
+```
 
 #### Solution : pip install urllib3==1.26.6 <br>
 https://stackoverflow.com/questions/76187256/importerror-urllib3-v2-0-only-supports-openssl-1-1-1-currently-the-ssl-modu
+
+---------------------------------------------------
+### ErrorNo.3 <a id="ErrorNo.3"></a> 
+#### Env : Win10 / Python3.7<br>
+cmd : TensorFlow execution code
+
+```
+TypeError: Descriptors cannot be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower)
+```
+
+#### Solution : The protobuf 3.16(and more version) package is missing 'builder.py', which is necessary for resolving errors that may occur during the installation and verification of the object detection API. To address this, install Protocol Buffer version 22.0 and then refer to the solution with the most votes at the link provided below.
+#### https://stackoverflow.com/questions/71759248/importerror-cannot-import-name-builder-from-google-protobuf-internal<br>
+And if you're looking for the location of builder.py, refer to the path below.
+```
+# Path of builder.py
+venv(or conda)dir/Lib/site-packages/google/protobuf/internal
+```
