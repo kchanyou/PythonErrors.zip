@@ -114,6 +114,7 @@ venv(or conda)dir/Lib/site-packages/google/protobuf/internal
 #### Env : Win10 / Python3.7<br>
 cmd : TensorFlow Object Detection API install code
 
+```
   Downloading seqeval-1.2.2.tar.gz (43 kB)
      ---------------------------------------- 43.6/43.6 kB ? eta 0:00:00
   Preparing metadata (setup.py) ... error
@@ -162,5 +163,6 @@ error: metadata-generation-failed
 
 note: This is an issue with the package mentioned above, not pip.
 hint: See above for details.
+```
 
 #### Solution : pip install typing-extensions
