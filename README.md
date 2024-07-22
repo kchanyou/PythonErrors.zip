@@ -6,7 +6,9 @@ Collection of Python errors and solutions
 - [ImportError: The requests library is not installed from please install the requests package to use the requests transport.
 ](#ErrorNo.2)
 - [TypeError: Descriptors cannot be created directly.(PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python)
-](#ErrorNo.2)
+](#ErrorNo.3)
+- [ImportError: cannot import name 'Protocol' from 'typing'
+](#ErrorNo.4)
 
 ---------------------------------------------------
 ### ErrorNo.1 <a id="ErrorNo.1"></a> 
@@ -106,43 +108,9 @@ And if you're looking for the location of builder.py, refer to the path below.
 venv(or conda)dir/Lib/site-packages/google/protobuf/internal
 ```
 
+
 -----------------------------------------------------
 ### ErrorNo.4 <a id="ErrorNo.4"></a> 
-#### Env : Win10 / Python3.7<br>
-cmd : TensorFlow Object Detection API install code
-
-  Downloading avro-python3-1.9.2.1.tar.gz (37 kB)
-  Preparing metadata (setup.py) ... done
-Discarding https://files.pythonhosted.org/packages/5a/80/acd1455bea0a9fcdc60a748a97dcbb3ff624726fb90987a0fc1c19e7a5a5/avro-python3-1.9.2.1.tar.gz (from https://pypi.org/simple/avro-python3/) (requires-python:>=3.5): Requested avro-python3 from https://files.pythonhosted.org/packages/5a/80/acd1455bea0a9fcdc60a748a97dcbb3ff624726fb90987a0fc1c19e7a5a5/avro-python3-1.9.2.1.tar.gz (from object-detection==0.1) has inconsistent version: expected '1.9.2.1', but metadata has 'file-.avro-VERSION.txt'
-  Downloading avro-python3-1.9.2.tar.gz (37 kB)
-  Preparing metadata (setup.py) ... error
-  error: subprocess-exited-with-error
-
-  × python setup.py egg_info did not run successfully.
-  │ exit code: 1
-  ╰─> [6 lines of output]
-      Traceback (most recent call last):
-        File "<string>", line 36, in <module>
-        File "<pip-setuptools-caller>", line 34, in <module>
-        File "C:\Users\usrname\AppData\Local\Temp\pip-install-3ods4_97\avro-python3_9fc70627553a4f0abf0833839d23fbe7\setup.py", line 41, in <module>
-          import pycodestyle
-      ModuleNotFoundError: No module named 'pycodestyle'
-      [end of output]
-
-  note: This error originates from a subprocess, and is likely not a problem with pip.
-error: metadata-generation-failed
-
-× Encountered error while generating package metadata.
-╰─> See above for output.
-
-note: This is an issue with the package mentioned above, not pip.
-hint: See above for details.
-
-#### Solution : pip install pycodestyle
-
-
------------------------------------------------------
-### ErrorNo.5 <a id="ErrorNo.5"></a> 
 #### Env : Win10 / Python3.7<br>
 cmd : TensorFlow Object Detection API install code
 
