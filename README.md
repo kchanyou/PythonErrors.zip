@@ -172,7 +172,7 @@ hint: See above for details.
 -----------------------------------------------------
 ### ErrorNo.5 <a id="ErrorNo.5"></a> 
 #### Env : Win10 / Python3.6<br>
-path : models/research/object_detection (TensorFlow2 setup.py)
+path : models/research/object_detection (TensorFlow2 setup.py)<br>
 cmd : python -m pip install --use-feature=2020-resolver .
 
 ```
