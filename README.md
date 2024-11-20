@@ -9,7 +9,7 @@ Collection of Python errors and solutions
 ](#ErrorNo.3)
 - [ImportError: cannot import name 'Protocol' from 'typing'
 ](#ErrorNo.4)
-
+- [ERROR: Disabling PEP 517 processing is invalid: project specifies a build backend of setuptools.build_meta in pyproject.toml](#ErrorNo.5)
 ---------------------------------------------------
 ### ErrorNo.1 <a id="ErrorNo.1"></a> 
 #### Env : Win10 / Python3.6<br>
@@ -166,3 +166,41 @@ hint: See above for details.
 ```
 
 #### Solution : pip install typing-extensions
+
+
+
+-----------------------------------------------------
+### ErrorNo.5 <a id="ErrorNo.5"></a> 
+#### Env : Win10 / Python3.6<br>
+path : models/research/object_detection (TensorFlow2 setup.py)
+cmd : python -m pip install --use-feature=2020-resolver .
+
+```
+Collecting apache-beam
+  Downloading apache_beam-2.38.0-cp36-cp36m-win_amd64.whl (4.0 MB)
+     |████████████████████████████████| 4.0 MB 2.2 MB/s
+Collecting pillow
+  Downloading Pillow-8.4.0-cp36-cp36m-win_amd64.whl (3.2 MB)
+     |████████████████████████████████| 3.2 MB 6.4 MB/s
+Collecting lxml
+  Downloading lxml-5.3.0-cp36-cp36m-win_amd64.whl (3.9 MB)
+     |████████████████████████████████| 3.9 MB 6.8 MB/s
+Collecting matplotlib
+  Downloading matplotlib-3.3.4-cp36-cp36m-win_amd64.whl (8.5 MB)
+     |████████████████████████████████| 8.5 MB 6.4 MB/s
+Collecting Cython
+  Downloading Cython-3.0.11-cp36-cp36m-win_amd64.whl (2.8 MB)
+     |████████████████████████████████| 2.8 MB ...
+Collecting contextlib2
+  Downloading contextlib2-21.6.0-py2.py3-none-any.whl (13 kB)
+Collecting tf-slim
+  Downloading tf_slim-1.1.0-py2.py3-none-any.whl (352 kB)
+     |████████████████████████████████| 352 kB 6.4 MB/s
+Collecting six
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting pycocotools
+  Downloading pycocotools-2.0.7.tar.gz (24 kB)
+ERROR: Disabling PEP 517 processing is invalid: project specifies a build backend of setuptools.build_meta in pyproject.toml
+```
+
+#### Solution : Use Python 3.7
